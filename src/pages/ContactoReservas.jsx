@@ -138,7 +138,7 @@ export default function ContactoReservas() {
         .pt-32 { padding-top: 8rem; }
         .pb-20 { padding-bottom: 5rem; }
         .text-center { text-align: center; }
-        .text-primary { color: var(--color-primary); }
+        .text-primary { color: var(--text-primary); }
         .text-secondary { color: var(--color-secondary); }
         .text-secondary-color { color: var(--text-secondary); line-height: 1.6; }
         .text-white { color: white; }
@@ -168,7 +168,7 @@ export default function ContactoReservas() {
 
         .contact-info {
           padding: 3rem;
-          background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+          background: #1A1A1A;
           border: none;
         }
 
@@ -248,7 +248,7 @@ export default function ContactoReservas() {
           height: 80px;
           border-radius: 50%;
           background: var(--color-secondary);
-          color: var(--color-primary);
+          color: var(--text-primary);
           font-size: 3rem;
           margin: 0 auto;
         }

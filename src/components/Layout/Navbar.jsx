@@ -93,9 +93,10 @@ export default function Navbar() {
         }
         .navbar-scrolled {
           padding: 1rem 0;
-          background: rgba(10, 10, 10, 0.95);
-          color: white;
-          border-bottom: 1px solid rgba(255,255,255,0.05);
+          background: rgba(255, 255, 255, 0.95);
+          color: var(--text-primary);
+          border-bottom: 1px solid rgba(0,0,0,0.05);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         .navbar-transparent {
           background: transparent;
@@ -150,7 +151,7 @@ export default function Navbar() {
         }
         .nav-btn:hover {
           background: var(--color-secondary);
-          color: white;
+          color: #FFF;
         }
 
         .mobile-toggle {

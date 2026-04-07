@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
+import FloatingWhatsApp from './components/Layout/FloatingWhatsApp';
 
 // Pages
 import Inicio from './pages/Inicio';
@@ -35,6 +36,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </Router>
   );
 }

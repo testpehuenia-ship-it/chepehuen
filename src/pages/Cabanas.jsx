@@ -121,8 +121,8 @@ export default function Cabanas() {
 
       <style>{`
         .apres-ski-dark {
-          background-color: var(--color-bg-dark);
-          color: var(--text-light);
+          background-color: var(--color-bg-light);
+          color: var(--text-primary);
           min-height: 100vh;
         }
         .page-header {
@@ -144,13 +144,14 @@ export default function Cabanas() {
         .overlay-gradient-dark {
           position: absolute;
           top: 0; left: 0; width: 100%; height: 100%;
-          background: linear-gradient(to bottom, rgba(10,10,10,0.2) 0%, var(--color-bg-dark) 100%);
+          background: linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 100%);
           z-index: 1;
         }
         .page-title {
           color: white;
           letter-spacing: 0.05em;
           text-transform: uppercase;
+          text-shadow: 0 4px 15px rgba(0,0,0,0.6);
         }
         .z-10 { z-index: 10; }
         .relative { position: relative; }
@@ -224,7 +225,7 @@ export default function Cabanas() {
         
         .luxury-name {
           font-family: var(--font-heading);
-          color: white;
+          color: var(--text-primary);
           font-size: 2.5rem;
           margin-bottom: 1.5rem;
         }
@@ -241,8 +242,8 @@ export default function Cabanas() {
           grid-template-columns: 1fr 1fr;
           gap: 1.25rem;
           margin-bottom: 3rem;
-          border-top: 1px solid rgba(255,255,255,0.05);
-          border-bottom: 1px solid rgba(255,255,255,0.05);
+          border-top: 1px solid rgba(0,0,0,0.05);
+          border-bottom: 1px solid rgba(0,0,0,0.05);
           padding: 1.5rem 0;
         }
         
@@ -267,7 +268,7 @@ export default function Cabanas() {
         .price-tag {
           font-family: var(--font-heading);
           font-size: 1.25rem;
-          color: white;
+          color: var(--text-primary);
         }
 
         .reserve-btn {

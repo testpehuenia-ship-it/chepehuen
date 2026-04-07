@@ -24,13 +24,18 @@ export default function Promociones() {
 
     return (
         <div className="page-wrapper animate-fade-in pb-20">
-            <div className="section-padding pt-32 container">
-                <div className="text-center mb-16">
-                    <h1 className="text-h1 text-primary">Promociones Exclusivas</h1>
-                    <p className="text-lead mt-4 max-w-2xl mx-auto">
+            <div className="page-header">
+                <div className="overlay-gradient-dark"></div>
+                <img src="/images/image01.png" alt="Promociones" className="header-bg" />
+                <div className="container relative z-10 header-content text-center">
+                    <h1 className="text-h1 page-title">Promociones Exclusivas</h1>
+                    <p className="text-lead mt-4 max-w-2xl mx-auto page-subtitle">
                         Aprovecha nuestros beneficios de temporada para planificar tu próxima visita a Villa Pehuenia al mejor precio.
                     </p>
                 </div>
+            </div>
+
+            <div className="section-padding container">
 
                 <div className="promos-grid">
                     {promos.map((promo) => (
@@ -50,7 +55,7 @@ export default function Promociones() {
                                     <CalendarCheck size={18} className="text-secondary" />
                                     <span className="text-sm">{promo.validity}</span>
                                 </div>
-                                <Link to="/reservas" className="btn btn-outline text-primary mt-8 w-full border-primary hover-bg-primary">
+                                <Link to="/reservas" className="btn btn-outline mt-8 w-full">
                                     Consultar Disponibilidad
                                 </Link>
                             </div>
@@ -61,10 +66,19 @@ export default function Promociones() {
 
             <style>{`
         .page-wrapper { min-height: 100vh; background: var(--color-bg-light); }
-        .pt-32 { padding-top: 8rem; }
+        
+        .page-header { position: relative; height: 50vh; min-height: 400px; display: flex; align-items: center; overflow: hidden; justify-content: center; }
+        .header-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.6); }
+        .overlay-gradient-dark { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 100%); z-index: 1; }
+        .z-10 { z-index: 10; }
+        .relative { position: relative; }
+        .page-title { color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .page-subtitle { color: rgba(255,255,255,0.9) !important; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+
         .pb-20 { padding-bottom: 5rem; }
         .text-center { text-align: center; }
-        .text-primary { color: var(--color-primary); }
+        .text-primary { color: var(--text-primary); }
+        .text-white { color: white !important; }
         .mb-16 { margin-bottom: 4rem; }
         .mb-3 { margin-bottom: 0.75rem; }
         .mb-6 { margin-bottom: 1.5rem; }
@@ -73,8 +87,6 @@ export default function Promociones() {
         .max-w-2xl { max-width: 42rem; }
         .mx-auto { margin-left: auto; margin-right: auto; }
         .w-full { width: 100%; text-align: center; }
-        .border-primary { border-color: var(--color-primary); color: var(--color-primary); }
-        .hover-bg-primary:hover { background: var(--color-primary); color: white; }
 
         .promos-grid {
           display: grid;

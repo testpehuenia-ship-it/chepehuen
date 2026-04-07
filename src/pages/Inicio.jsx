@@ -10,10 +10,10 @@ export default function Inicio() {
       <section className="feature-section">
         <div className="container">
           <div className="text-center animate-slide-up offset-text">
-            <h2 className="text-h2 section-title">Tu Refugio en la Cordillera</h2>
+            <h2 className="text-h2 section-title">Vacaciones familiares en Villa Pehuenia</h2>
             <p className="text-lead section-desc mx-auto">
-              Experimenta el encanto de la Patagonia en un entorno de confort absoluto.
-              Cabañas Chepehuen te invita a despertar entre araucarias milenarias y vistas espectaculares.
+              Despertar con el aroma a pino y el silencio de la cordillera. 
+              Experimenta el encanto y descubre tu hogar patagónico con comodidad para toda la familia.
             </p>
           </div>
 
@@ -23,9 +23,9 @@ export default function Inicio() {
                 <img src="/images/image01.webp" alt="Cabañas Exclusivas" loading="lazy" className="card-img" />
               </div>
               <div className="card-body">
-                <h3>Cabañas Exclusivas</h3>
-                <p>Equipamiento premium, vistas panorámicas y diseño patagónico con lujo en cada detalle.</p>
-                <Link to="/cabanas" className="action-link">Conocer Cabañas</Link>
+                <h3>Cabañas para 6 personas</h3>
+                <p>Cabañas con parrilla y cocina completa Pehuenia, ideales para familias y grupos grandes.</p>
+                <Link to="/cabanas" className="action-link">Ver Comodidades</Link>
               </div>
             </div>
             <div className="card highlight-card">
@@ -33,16 +33,16 @@ export default function Inicio() {
                 <img src="/images/image04.webp" alt="Paisaje" loading="lazy" className="card-img" />
               </div>
               <div className="card-body">
-                <h3>Vistas Incomparables</h3>
-                <p>El bosque y el lago a tus pies. Desconecta de la rutina en un entorno privilegiado.</p>
-                <Link to="/informacion" className="action-link">Descubrir Destino</Link>
+                <h3>Ubicación Estratégica</h3>
+                <p>Alojamiento cerca del centro comercial Villa Pehuenia, la paz del bosque sin resignar conveniencia.</p>
+                <Link to="/ubicacion" className="action-link">Cómo Llegar</Link>
               </div>
             </div>
             <div className="card highlight-promo">
               <div className="promo-content">
-                <h3 className="promo-title">Vive la<br />Temporada</h3>
+                <h3 className="promo-title">Disfruta la<br />Temporada</h3>
                 <p className="promo-desc">
-                  Reserva anticipada con beneficios exclusivos. Tu próxima aventura empieza aquí.
+                  Reservas al mejor precio garantizado. La aventura familiar ideal comienza aquí.
                 </p>
                 <Link to="/reservas" className="btn btn-outline reserve-btn">Reservar ahora</Link>
               </div>
@@ -58,26 +58,26 @@ export default function Inicio() {
             <img src="/images/image02.webp" alt="Villa Pehuenia" loading="lazy" className="info-img" />
           </div>
           <div className="info-text animate-slide-up delay-100">
-            <h4 className="luxury-subtitle">EL DESTINO</h4>
-            <h2 className="text-h2 section-title">Descubre Villa Pehuenia</h2>
+            <h4 className="luxury-subtitle">EXPERIENCIA AUTÉNTICA</h4>
+            <h2 className="text-h2 section-title">Descanso para toda la familia</h2>
             <p className="section-desc mb-6" style={{ marginBottom: '2rem' }}>
-              Un paraíso escondido en el corazón de la Patagonia Argentina. Rodeado de lagos cristalinos (Aluminé y Moquehue) y bosques nativos de majestuosas araucarias.
+              Villa Pehuenia es ideal para desconectar entre frondosos abedules y lagos inmaculados, con la facilidad y calidez que toda gran familia valora.
             </p>
             <div className="services-list mt-6">
               <div className="srv-item">
-                <span className="srv-bullet"></span>Gastronomía Patagónica de Autor
+                <span className="srv-bullet"></span>Alojamiento impecable con énfasis en limpieza y confort
               </div>
               <div className="srv-item">
-                <span className="srv-bullet"></span>Deportes Invernales (Parque de Nieve Batea Mahuida)
+                <span className="srv-bullet"></span>5 lugares increíbles para ir con niños sin largas caminatas
               </div>
               <div className="srv-item">
-                <span className="srv-bullet"></span>Trekking, Pesca y Navegación
+                <span className="srv-bullet"></span>Los mejores productos regionales para tu mesa patagónica
               </div>
               <div className="srv-item">
-                <span className="srv-bullet"></span>Servicios esenciales (Supermercados, Centro de Salud)
+                <span className="srv-bullet"></span>Conectividad y servicios a pasos de la cabaña
               </div>
             </div>
-            <Link to="/informacion" className="action-link mt-8" style={{ marginTop: '2.5rem' }}>Ver Guía Completa</Link>
+            <Link to="/informacion" className="action-link mt-8" style={{ marginTop: '2.5rem' }}>Leer Guía de Viaje</Link>
           </div>
         </div>
       </section>
@@ -116,7 +116,7 @@ export default function Inicio() {
         .mt-12 { margin-top: 5rem; }
         
         .section-title {
-          color: white;
+          color: var(--text-primary);
           margin-bottom: 1.5rem;
           letter-spacing: 0.05em;
         }
@@ -175,7 +175,7 @@ export default function Inicio() {
         }
         
         .action-link {
-          color: white;
+          color: var(--text-primary);
           text-decoration: none;
           text-transform: uppercase;
           letter-spacing: 0.15em;
@@ -214,7 +214,7 @@ export default function Inicio() {
         }
         .promo-title {
           font-size: 2.5rem;
-          color: white;
+          color: var(--text-primary);
           margin-bottom: 1rem;
         }
         .promo-desc {

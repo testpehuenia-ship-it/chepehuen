@@ -55,7 +55,7 @@ export default function Footer() {
 
             <style>{`
         .footer {
-          background-color: var(--color-bg-dark);
+          background-color: #1A1A1A;
           color: white;
           padding-top: 5rem;
         }

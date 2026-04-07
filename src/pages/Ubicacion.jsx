@@ -76,7 +76,7 @@ export default function Ubicacion() {
         .pt-32 { padding-top: 8rem; }
         .pb-20 { padding-bottom: 5rem; }
         .text-center { text-align: center; }
-        .text-primary { color: var(--color-primary); }
+        .text-primary { color: var(--text-primary); }
         .text-secondary { color: var(--color-secondary); }
         .text-secondary-color { color: var(--text-secondary); line-height: 1.6; }
         .mb-16 { margin-bottom: 4rem; }

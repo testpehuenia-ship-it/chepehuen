@@ -60,7 +60,7 @@ export default function Informacion() {
         .mb-12 { margin-bottom: 3rem; }
         .max-w-4xl { max-width: 56rem; }
         .mx-auto { margin-left: auto; margin-right: auto; }
-        .text-primary { color: var(--color-primary); }
+        .text-primary { color: var(--text-primary); }
         .text-lg { font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); }
         .min-h-screen { min-height: 80vh; }
         
@@ -76,13 +76,13 @@ export default function Informacion() {
         }
 
         .info-card h3 {
-          color: var(--color-primary);
+          color: var(--text-primary);
           font-size: 1.5rem;
           margin-bottom: 1rem;
         }
 
         .dark-card {
-          background: var(--color-primary);
+          background: #1A1A1A;
           color: white;
           border-left: 4px solid var(--color-accent);
         }

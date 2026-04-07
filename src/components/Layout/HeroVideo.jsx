@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, User, Search } from 'lucide-react';
 
 export default function HeroVideo() {
+  const [llegada, setLlegada] = useState('');
+  const [salida, setSalida] = useState('');
+  const [huespedes, setHuespedes] = useState('2 Personas');
+
+  const handleBuscar = (e) => {
+    e.preventDefault();
+    if (!llegada || !salida) {
+      alert("Por favor, selecciona las fechas de llegada y salida para continuar.");
+      return;
+    }
+
+    // Format dates to DD/MM/YYYY
+    const formLlegada = llegada.split('-').reverse().join('/');
+    const formSalida = salida.split('-').reverse().join('/');
+
+    const msg = `¡Hola! Estoy buscando cabaña desde el ${formLlegada} hasta el ${formSalida} para ${huespedes}. ¿Tienen disponibilidad?`;
+    const whatsappUrl = `https://wa.me/5492942000000?text=${encodeURIComponent(msg)}`;
+    
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="hero-container">
       <div className="hero-section">
@@ -22,7 +43,7 @@ export default function HeroVideo() {
         </div>
 
         <div className="hero-content container">
-          <p className="text-lead animate-slide-up delay-100">En cada momento, una experiencia inolvidable</p>
+          <p className="text-lead animate-slide-up delay-100 hero-subtitle">En cada momento, una experiencia inolvidable</p>
           <h1 className="text-h1 hero-title animate-slide-up">
             Cabañas Boutique<br />en la Patagonia
           </h1>
@@ -36,21 +57,21 @@ export default function HeroVideo() {
             <span className="booking-label">Llegada</span>
             <div className="booking-input-wrap">
               <Calendar size={18} className="booking-icon" />
-              <input type="date" className="booking-input" />
+              <input type="date" className="booking-input" value={llegada} onChange={(e) => setLlegada(e.target.value)} />
             </div>
           </div>
           <div className="booking-field">
             <span className="booking-label">Salida</span>
             <div className="booking-input-wrap">
               <Calendar size={18} className="booking-icon" />
-              <input type="date" className="booking-input" />
+              <input type="date" className="booking-input" value={salida} onChange={(e) => setSalida(e.target.value)} />
             </div>
           </div>
           <div className="booking-field">
             <span className="booking-label">Huéspedes</span>
             <div className="booking-input-wrap">
               <User size={18} className="booking-icon" />
-              <select className="booking-input">
+              <select className="booking-input" value={huespedes} onChange={(e) => setHuespedes(e.target.value)}>
                 <option>1 Persona</option>
                 <option>2 Personas</option>
                 <option>3 Personas</option>
@@ -59,9 +80,9 @@ export default function HeroVideo() {
               </select>
             </div>
           </div>
-          <Link to="/reservas" className="btn btn-primary booking-btn">
+          <button onClick={handleBuscar} className="btn btn-primary booking-btn" style={{ border: 'none' }}>
             Buscar
-          </Link>
+          </button>
         </div>
       </div>
 
@@ -103,6 +124,12 @@ export default function HeroVideo() {
           color: white;
           text-align: center;
           margin-top: -5rem; /* center offset */
+        }
+        .hero-subtitle {
+          color: var(--color-secondary) !important;
+          font-weight: 700;
+          text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+          letter-spacing: 0.15em;
         }
         .hero-title {
           margin-top: 1.5rem;
